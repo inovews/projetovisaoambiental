@@ -113,7 +113,7 @@ class UsuariosController extends Controller
                     $form->password = bcrypt($form->password);
                 }
             });*/
-            $form->password('password', trans('admin.password'))->rules('required|confirmed');
+            $form->password('password', trans('password'))->rules('required|confirmed');
             $form->password('password_confirmation', trans('admin.password_confirmation'))->rules('required')
                 ->default(function ($form) {
                     return $form->model()->password;
@@ -121,8 +121,8 @@ class UsuariosController extends Controller
 
             $form->ignore(['password_confirmation']);
 
-            $form->multipleSelect('roles', trans('admin.roles'))->options(UsuariosRole::all()->pluck('name', 'id'));
-            $form->multipleSelect('permissions', trans('admin.permissions'))->options(UsuariosPermission::all()->pluck('name', 'id'));
+            $form->multipleSelect('users_roles', trans('roles'))->options(UsuariosRole::all()->pluck('name', 'id'));
+            $form->multipleSelect('users_permissions', trans('admin.permissions'))->options(UsuariosPermission::all()->pluck('name', 'id'));
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
