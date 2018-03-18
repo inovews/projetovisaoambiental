@@ -18,6 +18,7 @@ Route::group([
      	'noticias' => NoticiasController::class,
      	'banners' => BannerController::class,
         'usuarios' => UsuariosController::class,
+        'parceiros' => ParceirosController::class,
      ]);
 
      $router->get('api/users', 'NoticiasController@users');
