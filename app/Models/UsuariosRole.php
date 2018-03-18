@@ -3,21 +3,25 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
+use UsuariosRoleUsers;
+use UsuariosPermission;
 
 class UsuariosRole extends Model
 {
     protected $table = 'users_roles';
 
+    protected $fillable = ['name', 'slug'];
+
     public function users()
     {
-        //return $this->belongsToMany(config('auth.providers.users.model', config('auth.model')))->withTimestamps();
-        //return $this->belongsTo('App\User');
-        return $this->belongsToMany(User::class, 'role_user');
+        return $this->belongsToMany(UsuariosRoleUsers::class, 'role_id', 'user_id');
     }
 
     public function permissions()
     {
-    	//return $this->belongsTo('App\UsuariosPermissions');
-    	return $this->belongsToMany(UsuariosPermissions::class, 'role_user');
+        return $this->belongsToMany(UsuariosPermission::class, 'role_id', 'user_id');
     }
+
 }
