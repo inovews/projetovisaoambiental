@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Parceiros;
+use App\Models\Colaboradores;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -11,7 +11,7 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 
-class ParceirosController extends Controller
+class ColaboradoresController extends Controller
 {
     use ModelForm;
 
@@ -24,7 +24,7 @@ class ParceirosController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
+            $content->header('Colaboradores');
             $content->description('description');
 
             $content->body($this->grid());
@@ -41,7 +41,7 @@ class ParceirosController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
+            $content->header('Colaboradores');
             $content->description('description');
 
             $content->body($this->form()->edit($id));
@@ -57,7 +57,7 @@ class ParceirosController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
+            $content->header('Colaboradores');
             $content->description('description');
 
             $content->body($this->form());
@@ -71,14 +71,14 @@ class ParceirosController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(Parceiros::class, function (Grid $grid) {
+        return Admin::grid(Colaboradores::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
 
             $grid->name()->editable();
             $grid->content()->ucfirst()->limit(50);
+            $grid->curriculolattes();
             $grid->picture()->image();
-            $grid->faculdade();
 
             $grid->created_at();
             $grid->updated_at();
@@ -92,14 +92,14 @@ class ParceirosController extends Controller
      */
     protected function form()
     {
-        return Admin::form(Parceiros::class, function (Form $form) {
+        return Admin::form(Colaboradores::class, function (Form $form) {
 
             $form->display('id', 'ID');
 
             $form->text('name')->rules('required');
             $form->editor('content')->rules('required');
+            $form->text('curriculolattes');
             $form->image('picture');
-            $form->text('faculdade');
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
