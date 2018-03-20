@@ -20,6 +20,7 @@ Route::group([
         'usuarios' => UsuariosController::class,
         'parceiros' => ParceirosController::class,
         'colaboradores' => ColaboradoresController::class,
+        'portalalunoprof' => PortalAlunoProfController::class,
      ]);
 
      $router->get('api/users', 'NoticiasController@users');
