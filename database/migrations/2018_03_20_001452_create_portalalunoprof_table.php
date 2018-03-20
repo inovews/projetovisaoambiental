@@ -29,6 +29,14 @@ class CreatePortalAlunoProfTable extends Migration
             $table->integer('curso_id');
             $table->timestamps();
         });
+
+        Schema::create('portalalunoprof_taggables', function (Blueprint $table) {
+            $table->integer('portalalunoprof_id')->nullable();
+            $table->integer('faculdade_id')->nullable();
+            $table->integer('faculdade_curso_id')->nullable();
+            $table->string('portalalunoprof_type')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -39,5 +47,6 @@ class CreatePortalAlunoProfTable extends Migration
     public function down()
     {
         Schema::dropIfExists('portalalunoprof');
+        Schema::dropIfExists('portalalunoprof_taggables');
     }
 }

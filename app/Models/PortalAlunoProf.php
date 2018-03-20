@@ -16,18 +16,17 @@ class PortalAlunoProf extends Model
 
     public function author()
     {
-        //return $this->belongsTo(User::class, 'author_id');
+        return $this->belongsTo(User::class, 'author_id');
     }
 
     public function faculdades()
     {
-    	//return $this->belongsTo(Faculdade::class, 'faculdade_id');
-        return $this->hasMany(Faculdade::class,'id','faculdade_id');
+        return $this->morphToMany(Faculdade::class, 'portalalunoprof', 'portalalunoprof_taggables');
     }
 
     public function cursos()
     {
-        return $this->hasMany(FaculdadeCurso::class,'id','curso_id');
+        return $this->morphToMany(FaculdadeCurso::class,'portalalunoprof','portalalunoprof_taggables');
     }
 
     public function scopeHot($query)
