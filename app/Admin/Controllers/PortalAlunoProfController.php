@@ -79,6 +79,12 @@ class PortalAlunoProfController extends Controller
 
             $grid->id('ID')->sortable();
 
+            $grid->title('Titulo');
+            $grid->faculdades()->pluck('name')->label();
+            $grid->cursos()->pluck('name')->label();
+            $grid->periodo('Período')->label('default');
+            $grid->data_aula('Data Aula');
+
             $grid->created_at();
             $grid->updated_at();
         });
