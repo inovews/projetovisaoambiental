@@ -112,8 +112,8 @@ class PortalAlunoProfController extends Controller
             $form->image('picture');
             $form->file('download');
             $form->text('link');
-            $form->multipleSelect('faculdade_id', trans('faculdade_id'))->options(Faculdade::all()->pluck('name', 'id'));
-            $form->multipleSelect('curso_id', trans('curso_id'))->options(FaculdadeCurso::all()->pluck('name', 'id'));
+            //$form->multipleSelect('faculdade_id', trans('faculdade_id'))->options(Faculdade::all()->pluck('name', 'id'));
+            //$form->multipleSelect('curso_id', trans('curso_id'))->options(FaculdadeCurso::all()->pluck('name', 'id'));
             $form->number('periodo');
 
             $form->date('data_aula');
