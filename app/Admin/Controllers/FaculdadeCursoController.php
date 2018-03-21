@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\FaculdadeCurso;
+use App\Models\Faculdade;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -75,6 +76,9 @@ class FaculdadeCursoController extends Controller
 
             $grid->id('ID')->sortable();
 
+            $grid->name('Nome');
+            $grid->faculdade()->name()->label();;
+
             $grid->created_at();
             $grid->updated_at();
         });
@@ -90,6 +94,9 @@ class FaculdadeCursoController extends Controller
         return Admin::form(FaculdadeCurso::class, function (Form $form) {
 
             $form->display('id', 'ID');
+
+            $form->text('name');
+            $form->select('faculdade_id')->options(Faculdade::all()->pluck('name', 'id'));
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

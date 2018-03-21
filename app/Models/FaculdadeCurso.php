@@ -25,4 +25,9 @@ class FaculdadeCurso extends Model
 
 		$this->options = $options;
 	}
+
+	public function faculdade()
+    {
+        return $this->belongsTo(Faculdade::class, 'faculdade_id');
+    }
 }

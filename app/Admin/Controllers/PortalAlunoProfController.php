@@ -8,8 +8,6 @@ use App\Models\User;
 use App\Models\Faculdade;
 use App\Models\FaculdadeCurso;
 
-use App\Models\Tag;
-
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;

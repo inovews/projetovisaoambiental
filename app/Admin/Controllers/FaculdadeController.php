@@ -75,6 +75,8 @@ class FaculdadeController extends Controller
 
             $grid->id('ID')->sortable();
 
+            $grid->name('Nome');
+
             $grid->created_at();
             $grid->updated_at();
         });
@@ -90,6 +92,8 @@ class FaculdadeController extends Controller
         return Admin::form(Faculdade::class, function (Form $form) {
 
             $form->display('id', 'ID');
+
+            $form->text('name');
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
