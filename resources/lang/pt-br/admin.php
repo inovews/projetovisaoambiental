@@ -24,7 +24,7 @@ return [
     'reset'        => 'Resetar',
     'export'       => 'Exportar',
     'batch_delete' => 'Batch delete',
-    'save'         => 'Savar',
+    'save'         => 'Salvar',
     'refresh'      => 'Atualizar',
     'order'        => 'Ordem',
     'expand'       => 'Expandir',
@@ -99,7 +99,7 @@ return [
 
     'upload'     => 'Upload',
     'new_folder' => 'Nova past',
-    'time'       => 'Homra',
+    'time'       => 'Hora',
     'size'       => 'Tamanho',
 
     'listbox' => [
