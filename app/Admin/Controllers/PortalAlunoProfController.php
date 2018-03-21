@@ -128,6 +128,12 @@ class PortalAlunoProfController extends Controller
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
+
+            /*$form->saved(function () {
+                admin_toastr(trans('admin.update_succeeded'));
+
+                return redirect(admin_base_path('portal/alunoprof'));
+            });*/
         });
     }
 }
