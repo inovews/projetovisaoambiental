@@ -93,7 +93,7 @@
 
         <h3 class="text-center">Material Didático</h3>
 
-        <div class="row text-center">
+        <!--<div class="row text-center">
             <div class="col-sm-6 col-md-4">
                 <div class="tile">
                     <h3 class="tile-title padding-bottom-30 padding-top-40">Lorem ipsum</h3>
@@ -114,7 +114,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                 </div>
             </div>
-        </div>
+        </div>-->
         <table class="table forum table-striped">
             <thead>
                 <tr>
@@ -126,33 +126,35 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($alunoprofs as $k => $alunoprof)
                 <tr>
                     <td class="text-center">
                         <i class="fa fa-file fa-2x"></i>
                     </td>
                     <td>
                         <h4>
-                            <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</a>
+                            <a href="#">{!! $alunoprof->title !!}</a>
                             <br>
                             <small class="help-block"> Por
-                                <a href="#">Admin</a>
-                                3 meses atrás em
+                                <a href="#">{!! $alunoprof->author->name !!}</a>
+                                <!--3 mesesatrás--> em 
                                 <span class="label label-primary">
-                                    Ciências Contábeis
+                                    {!! $alunoprof->cursos->pluck('name') !!}
                                 </span>
                                 <br>
                                 Faculdade
                                 <span class="label label-success">
-                                    Farol
+                                   {!! $alunoprof->faculdades->pluck('name') !!}
                                 </span>
                             </small>
                         </h4>
                     </td>
 
                     <td class="hidden-xs hidden-sm">
-                        <small><i class="fa fa-clock-o"></i> 23/03/2018 </small>
+                        <small><i class="fa fa-clock-o"></i> {!! $alunoprof->data_aula !!} </small>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
 

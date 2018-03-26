@@ -23,7 +23,7 @@
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                
                     </ul> 
                 </div>
-                <a class="btn btn-success pull-right" href="#" target="_blank"><i class="fa fa-graduation-cap"></i> Portal Aluno/Professor</a>              
+                <a class="btn btn-success pull-right" href="{{ url('search') }}"><i class="fa fa-graduation-cap"></i> Portal Aluno/Professor</a>             
             </div>
 
         </header>
@@ -57,7 +57,7 @@
                                 </li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="#">Registrar</a></li>
+                                <li class="active"><a href="{{ url('register')}}">Registrar</a></li>
                             </ul>
                         </div>
                     </div>

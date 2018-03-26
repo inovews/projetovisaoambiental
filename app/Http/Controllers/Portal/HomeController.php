@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Portal;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Models\PortalAlunoProf;
+
 class HomeController extends Controller
 {
     /**
@@ -24,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('portal.home', compact('usuarios'));
+        $alunoprofs = PortalAlunoProf::orderBy('data_aula', 'desc')->paginate(15);
+
+        return view('portal.home', compact('alunoprofs'));
     }
 }
