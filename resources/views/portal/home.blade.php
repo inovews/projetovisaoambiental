@@ -65,7 +65,7 @@
                     <div class="panel-default panel widget widget-shadow text-center">
                         <div class="widget-header">
                             <div class="widget-header-content">
-                                <img width=100px src="http://projetovisaoambiental.local:8000/uploads/images/avatar-110320182212.jpg">
+                                <!--<img width=100px src="http://projetovisaoambiental.local:8000/uploads/images/avatar-110320182212.jpg">-->
                                 <h4 class="profile-user">{{ Auth::user()->name }}</h4>
                                 <span class="label label-success">Aluno</span>
                                 <p class="help-block">Ciências Contábeis</p>
