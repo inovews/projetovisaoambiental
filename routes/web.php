@@ -47,4 +47,12 @@ Route::get('/noticias', 'BlogController@index');
 Route::get('/noticias/{noticiasSlug}', 'BlogController@show');*/
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+// BLACK ADMIN
+Route::group(['prefix' => 'portal', 'as' => 'portal.'], function()
+{
+	Route::get('/', ['as' => 'index', 'uses' => 'Portal\HomeController@index']);
+	Route::get('home', ['as' => 'home', 'uses' => 'Portal\HomeController@index']);
+});
