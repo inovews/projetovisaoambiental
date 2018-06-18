@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Website;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Models\Colaboradores;
+use App\Http\Requests;
+
 class ColaboradoresController extends Controller
 {
     /**
@@ -15,7 +18,9 @@ class ColaboradoresController extends Controller
     public function index()
     {
         //
-        return view('website.colaboradores.index');
+        $colaboradores = Colaboradores::latest()->paginate(10);
+
+        return view('website.colaboradores.index', compact('colaboradores'));
     }
 
     /**

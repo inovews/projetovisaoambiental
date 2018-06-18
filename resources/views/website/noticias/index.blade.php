@@ -7,7 +7,6 @@
 			<div class="row">
 				<div class="site-heading text-center">
 					<h3>Notícias</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim </p>
 					<div class="border"></div>
 				</div>
 			</div>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Website;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Models\Parceiros;
+use App\Http\Requests;
+
 class ParceirosController extends Controller
 {
     /**
@@ -15,7 +18,9 @@ class ParceirosController extends Controller
     public function index()
     {
         //
-        return view('website.parceiros.index');
+        $parceiros = Parceiros::latest()->paginate(10);
+
+        return view('website.parceiros.index', compact('parceiros'));
     }
 
     /**
