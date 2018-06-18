@@ -177,7 +177,7 @@
             </div>
 
             <div class="container text-center">
-                <small class="copyright">Todos os direitos reservados - 2017 Projeto Visão Ambiental <i class="fa fa-heart"></i></small>
+                <small class="copyright">Todos os direitos reservados - 2018 Projeto Visão Ambiental <i class="fa fa-heart"></i></small>
             </div>
         </footer>
     </div>
