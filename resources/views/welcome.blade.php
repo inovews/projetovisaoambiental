@@ -10,23 +10,18 @@
 </head>
 <body>
     <div class="app">
+
         <header class="header">
             <div class="container">                       
                 <img class="profile-image img-responsive pull-left" src="assets/images/logo-2.png" alt="Projeto Ambiental Sustentavel" />
                 <div class="profile-content pull-left">
                     <h1 class="name">Projeto</h1>
                     <h2 class="desc">Visão Ambiental</h2>   
-                    <ul class="social list-inline">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>                   
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li> 
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                
-                    </ul> 
                 </div>
                 <a class="btn btn-success pull-right" href="{{ url('portal', ['home']) }}"><i class="fa fa-graduation-cap"></i> Portal Aluno/Professor</a>              
             </div>
-
         </header>
+
         <div class="menu">
             <div class="container">
                 <nav class="navbar navbar-default">
@@ -55,9 +50,6 @@
                                         <li><a href="#">Contato</a></li>
                                     </ul>
                                 </li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="{{ url('register')}}">Registrar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,7 +94,6 @@
                     <div class="row">
                         <div class="site-heading text-center">
                             <h3>Notícias</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim </p>
                             <div class="border"></div>
                         </div>
                     </div>
@@ -154,155 +145,46 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <!--
-                <div class="panel bg-light">
-                    <div class="panel-body">
-                        <h2 class="side-heading">Popular Links</h2>
-                        <ul>
-                            <li><a href="#">Notícias e Eventos</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Galerias</a></li>
-                            <li><a href="#">Conteudos</a></li>
-                            <li><a href="#">Downloads</a></li>
-                        </ul>
-                    </div>
-                </div>
-                -->
-                <aside class="panel bg-light">
-                    <div class="panel-body">
-                        <h2 class="side-heading">Eventos</h2>
+        </div>
 
-                        <div id="news-carousel" class="carousel slide side-news" data-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="news carousel-item active">
-                                    <figure>
-                                        <a href="#">
-                                            <img src="https://images.pexels.com/photos/720243/pexels-photo-720243.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
-                                        </a>
-                                    </figure>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="date bg-primary">
-                                                <strong>24</strong> Oct 2017
-                                            </div>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading text-primary">Cumque ab et.</h4>
-                                            <div class="text limit">
-                                                <p>Tempora error provident nisi repellat at minima. Aut modi laborum culpa. Ut dolorem quod sunt quos dolore quis.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news carousel-item ">
-                                    <figure>
-                                        <a href="#">
-                                            <img src="http://bpocallaghan.co.za/uploads/photos/news-2-tn.jpg">
-                                        </a>
-                                    </figure>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="date bg-primary">
-                                                <strong>09</strong> Oct 2017
-                                            </div>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading text-primary">Consequatur minima id culpa.</h4>
-                                            <div class="text limit">
-                                                <p>Illum culpa et qui ad. Dolores quas quia facilis quibusdam nihil quae aut.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#news-carousel" role="button" data-slide="prev">
-                                <span class="fa fa-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#news-carousel" role="button" data-slide="next">
-                                <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 footer-brand animated fadeInLeft">
+                        <h1 class="name">Projeto</h1>
+                        <h2 class="desc">Visão Ambiental</h2> 
+                        <p>Esta página foi criada com o objetivo de promover a conscientização da visão ambiental de sustentabilidade, divulgando políticas que visem a conservação do meio ambiente e a sustentabilidade de projetos econômicos de qualquer natureza.</p>
+                    </div>
+                    <div class="col-md-4 footer-nav animated fadeInUp">
+                        <h4>Menu</h4>
+                        <div class="col-md-6">
+                            <ul class="pages">
+                                <li><a href="/">Página Inicial</a></li>
+                                <li><a href="/noticias">Notícias</a></li>
+                                <li><a href="/publicacoes">Publicações</a></li>
+                                <li><a href="#">Contato</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list">
+                                <li><a href="/oprojeto">O Projeto</a></li>
+                                <li><a href="/colaboradores">Colaboradores</a></li>
+                                <li><a href="/parceiros">Parceiros</a></li>
+                            </ul>
                         </div>
                     </div>
-                </aside>
-            </div>
-
-
-        <!--<section class="panel panel-default">
-            <div class="panel-body">
-                <div class="card-body">
-                    <h3 class="text-primary"><i class="fa fa-newspaper-o"></i> Boletim de Notícias</h3>
-                    <p>Inscreva-se no nosso boletim informativo para receber as últimas notícias do <strong>Projeto Ambiental Sustentavel</strong>.</p>
-                    <form method="post" action="#">
-                        <div class="row">
-                            <div class="form-group col-6 col-sm-5">
-                                <label class="sr-only" for="newsletter">Seu Nome</label>
-                                <input type="text" name="fullname" class="form-control d-block" placeholder="Seu Nome">
-                            </div>
-                            <div class="form-group col-6 col-sm-5">
-                                <label class="sr-only" for="newsletter">Seu E-mail</label>
-                                <input type="text" name="email" class="form-control d-block" placeholder="Seu E-mail">
-                            </div>
-                            <div class="form-group col-12 col-sm-2">
-                                <button type="submit" class="btn btn-primary btn-block btn-ajax-submit">Inscrever-se
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </section>-->
+
+            <div class="container text-center">
+                <small class="copyright">Todos os direitos reservados - 2017 Projeto Visão Ambiental <i class="fa fa-heart"></i></small>
+            </div>
+        </footer>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 footer-brand animated fadeInLeft">
-                    <h1 class="name">Projeto</h1>
-                    <h2 class="desc">Visão Ambiental</h2> 
-                    <p>Esta página foi criada com o objetivo de promover a conscientização da visão ambiental de sustentabilidade, divulgando políticas que visem a conservação do meio ambiente e a sustentabilidade de projetos econômicos de qualquer natureza.</p>
-                </div>
-                <div class="col-md-4 footer-nav animated fadeInUp">
-                    <h4>Menu</h4>
-                    <div class="col-md-6">
-                        <ul class="pages">
-                            <li><a href="/">Página Inicial</a></li>
-                            <li><a href="/noticias">Notícias</a></li>
-                            <li><a href="/publicacoes">Publicações</a></li>
-                            <li><a href="#">Contato</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="list">
-                            <li><a href="/oprojeto">O Projeto</a></li>
-                            <li><a href="/colaboradores">Colaboradores</a></li>
-                            <li><a href="/parceiros">Parceiros</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-2 footer-social animated fadeInDown">
-                    <h4>Redes Sociais</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container text-center">
-            <small class="copyright">Todos os direitos reservados - 2017 Projeto Visão Ambiental <i class="fa fa-heart"></i></small>
-        </div>
-    </footer>
-</div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    $('.carousel').carousel();
-</script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('.carousel').carousel();
+    </script>
 </body>
 </html>

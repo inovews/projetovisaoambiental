@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -28,6 +28,7 @@ class HomeController extends Controller
     {
         $alunoprofs = PortalAlunoProf::orderBy('data_aula', 'desc')->paginate(15);
 
-        return view('portal.home', compact('alunoprofs'));
+        //return view('portal.home', compact('alunoprofs'));
+        return view('portal.home', ['alunoprofs'=>$alunoprofs]);
     }
 }
