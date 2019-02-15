@@ -37,6 +37,7 @@ Route::group(['namespace' => 'Website'], function () {
 	Route::get('/colaboradores', 'ColaboradoresController@index');
 
 	Route::get('/eventos', 'EventosController@index');
+	Route::get('/eventos/{id}', ['uses'  => 'EventosController@show', 'as' => 'website.eventos.show']);
 
 	Route::get('/parceiros', 'ParceirosController@index');
 

@@ -52,7 +52,9 @@ class EventosController extends Controller
      */
     public function show($id)
     {
-        //
+        $evento = Eventos::findOrFail($id);
+
+        return view('website.eventos.show', compact('evento'));
     }
 
     /**
