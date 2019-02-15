@@ -39,6 +39,7 @@
                                 <li class="active"><a href="#">Página Inicial</a></li>
                                 <li><a href="/noticias">Notícias</a></li>
                                 <li><a href="/publicacoes">Publicações</a></li>
+                                <li><a href="/eventos">Eventos</a></li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sobre <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -50,6 +51,7 @@
                                         <li><a href="#">Contato</a></li>
                                     </ul>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
