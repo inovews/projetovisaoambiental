@@ -9,22 +9,18 @@
 	</div>
 	<div class="row">
 		@foreach($eventos as $evento)
-		<div class="col-md-5 ml-auto">
-			<div class="panel panel-plain">
-				<a href="#{{ $evento->faculdade }}">
-					<div class="panel-header panel-header-image">
-						<img class="img img-responsive" src="{{ url('uploads/'.$evento->picture) }}" alt="{{ $evento->name }}" width="300">
+		<div class="col-sm-6 col-md-4">
+					<div class="blog-box">
+						<div class="blog-box-image">
+							<img src="{{ url('uploads/'.$evento->picture) }}" class="img-responsive" alt="{{ $evento->title }}">
+						</div>
+						<div class="blog-box-content">
+							<h4><a href="{{ route('website.eventos.show', $evento->id) }}">{{ $evento->title }}</a></h4>
+							<p>{!! substr(strip_tags($evento->content), 0, 150) !!} {{ strlen(strip_tags($evento->content)) > 150 ? "..." : "" }}</p>
+							<a href="{{ route('website.eventos.show', $evento->id) }}" class="btn btn-default site-btn">Veja mais...</a>
+						</div>
 					</div>
-				</a>
-				<div class="panel-body ">
-					<h6 class="card-category">{{ $evento->name }}</h6>
-					
-					<p class="panel-description">
-						{!! substr(strip_tags($evento->content), 0, 150) !!} {{ strlen(strip_tags($evento->content)) > 150 ? "..." : "" }}
-					</p>
 				</div>
-			</div>
-		</div>
 		@endforeach
 
 	</div>
