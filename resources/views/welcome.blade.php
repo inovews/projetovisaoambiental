@@ -119,6 +119,12 @@
             </div>
 
             <div class="col-md-8">
+                <div class="row">
+                    <div class="site-heading text-center">
+                        <h3>Publicações</h3>
+                        <div class="border"></div>
+                    </div>
+                </div>
                 <div class="row pb-3">
                     @foreach($publicacoes as $publicacoe)
                     <div class="col-md-6">
@@ -140,6 +146,28 @@
                                         <p>{!! substr(strip_tags($publicacoe->content), 0, 75) !!} {{ strlen(strip_tags($publicacoe->content)) > 75 ? "..." : "" }}</p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="site-heading text-center">
+                        <h3>Eventos</h3>
+                        <div class="border"></div>
+                    </div>
+                    @foreach($eventos as $evento)
+                    <div class="col-sm-12 col-md-12">
+                        <div class="blog-box">
+                            <div class="blog-box-image">
+                                <img src="{{ url('uploads/'.$evento->picture) }}" class="img-responsive" alt="{{ $evento->title }}">
+                            </div>
+                            <div class="blog-box-content">
+                                <h4><a href="{{ route('website.eventos.show', $evento->id) }}">{{ $evento->title }}</a></h4>
+                                <p>{!! substr(strip_tags($evento->content), 0, 150) !!} {{ strlen(strip_tags($evento->content)) > 150 ? "..." : "" }}</p>
+                                <a href="{{ route('website.eventos.show', $evento->id) }}" class="btn btn-default site-btn">Veja mais...</a>
                             </div>
                         </div>
                     </div>

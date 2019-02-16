@@ -9,6 +9,7 @@ use App\Models\Website;
 use App\Models\Banner;
 use App\Models\Noticias;
 use App\Models\Publicacoes;
+use App\Models\Eventos;
 use App\Http\Requests;
 
 class WebsiteController extends Controller
@@ -27,8 +28,9 @@ class WebsiteController extends Controller
 
         $noticias = Noticias::orderBy('id', 'desc')->paginate(3);
         $publicacoes = Publicacoes::orderBy('id', 'desc')->paginate(4);
+        $eventos = Eventos::orderBy('id', 'desc')->paginate(2);
 
-        return view('welcome', compact('banners', 'noticias', 'publicacoes'));
+        return view('welcome', compact('banners', 'noticias', 'publicacoes', 'eventos'));
     }
 
     /**
